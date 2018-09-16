@@ -45,3 +45,18 @@ main img
     /* constrain images on small screens */
     max-width: 100%;
 }
+
+.my-tabs:hover {
+    border-radius: 5px;
+    background-color: var(--main-bg-color);
+    -webkit-transition: .3s; /* Safari */
+    transition: .3s;
+}
+
+.drops {
+  font-size: 13pt;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
