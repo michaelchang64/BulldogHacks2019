@@ -7,13 +7,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
         <!-- documentation at http://getbootstrap.com/docs/4.0/, alternative themes at https://bootswatch.com/4-alpha/ -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="{{ url_for('static', filename='node_modules/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet"/>
+        <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/> -->
 
         <link href="/static/styles.css" rel="stylesheet"/>
 
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script> -->
+        <script src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
         <title>{% block title %}{% endblock %}</title>
 
@@ -30,7 +31,7 @@
                         </button>
                         <div class="dropdown-menu drops" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">FAQ</a>
-                            <a class="dropdown-item" href="#">Sponsors</a>
+                            <a class="dropdown-item" href="#sponsors">Sponsors</a>
                             <a class="dropdown-item" href="#">Board</a>
                             <a class="dropdown-item" href="#">Speakers</a>
                             <a class="dropdown-item" href="#">Judges</a>
@@ -68,7 +69,7 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item">
                         <a href="#">
-                            <button class="btn btn-light" type="button" aria-haspopup="true" aria-expanded="false">
+                            <button class="btn btn-light btn-blue" type="button" aria-haspopup="true" aria-expanded="false">
                                 Register
                             </button>
                         </a>
@@ -85,12 +86,41 @@
             </header>
         {% endif %}
 
+    </head>
+
+    <body>
         <main class="container p-5">
             {% block main %}{% endblock %}
         </main>
 
-    </head>
-
-    <body>
+        <footer class="footer">
+            <div class="container">
+                <p class="pull-left foot-text">© 2018 YaleBulldogHacks</p>
+                <div class="pull-right">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/yalerussianchorus" target="_blank">
+                                <img class="social" src="http://res.cloudinary.com/yale-russian-chorus/image/upload/c_scale,w_40/v1518243945/Social/facebook.png">
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com/yalerussianchorus/" target="_blank">
+                                <img class="social" src="http://res.cloudinary.com/yale-russian-chorus/image/upload/c_scale,w_40/v1518243945/Social/insta.png">
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/yalerussianchorus" target="_blank">
+                                <img class="social" src="http://res.cloudinary.com/yale-russian-chorus/image/upload/c_scale,w_40/v1518243945/Social/youtube.png">
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/yalerussianchorus" target="_blank">
+                                <img class="social" src="http://res.cloudinary.com/yale-russian-chorus/image/upload/c_scale,w_40/v1518243945/Social/twitter.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

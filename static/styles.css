@@ -1,29 +1,27 @@
-nav .navbar-brand
-{
+:root {
+  --theme-blue: #537fbe;
+}
+
+nav .navbar-brand {
     /* size for brand */
     font-size: xx-large;
 }
 
 /* colors for brand */
-nav .navbar-brand .blue
-{
-    color: #537fbe;
+nav .navbar-brand .blue {
+    color: var(--theme-blue);
 }
-nav .navbar-brand .red
-{
+nav .navbar-brand .red {
     color: #ea433b;
 }
-nav .navbar-brand .yellow
-{
+nav .navbar-brand .yellow {
     color: #f5b82e;
 }
-nav .navbar-brand .green
-{
+nav .navbar-brand .green {
     color: #2e944b;
 }
 
-main .form-control
-{
+main .form-control {
     /* center form controls */
     display: inline-block;
 
@@ -31,19 +29,25 @@ main .form-control
     width: auto;
 }
 
-main
-{
+main {
     /* scroll horizontally as needed */
-    overflow-x: auto;
+    /* overflow-x: auto; */
 
     /* center contents */
     text-align: center;
 }
 
-main img
-{
+main img {
     /* constrain images on small screens */
     max-width: 100%;
+}
+
+/* General components */
+#nav li ul {
+    position: absolute;
+    top: 52px;
+    left: -27px;
+    padding: 20px;
 }
 
 .my-tabs:hover {
@@ -54,9 +58,58 @@ main img
 }
 
 .drops {
-  font-size: 13pt;
+    font-size: 13pt;
 }
 
 .dropdown:hover .dropdown-menu {
-  display: block;
+    display: block;
+}
+
+.btn-blue {
+    background-color: var(--theme-blue);
+    color: white;
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--theme-blue);
+    color: #262228;
+    padding: 1.5em 0;
+    /* padding-bottom: ; */
+    text-align: center;
+    width: 100%;
+}
+
+.foot-text {
+    font-size: 10pt;
+}
+
+.socials {
+    margin-left: 40%;
+}
+
+.social {
+    height: 25px;
+    width: 25px;
+    padding: 2px;
+    border-radius: 3px;
+    margin-left: 15px;
+}
+
+.social:hover {
+    background-color: white;
+    -webkit-transition: .3s; /* Safari */
+    transition: .3s;
+}
+
+/* Sections in homepage (index.html) */
+#sponsors {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: center;
+    padding: 1em 0;
 }
