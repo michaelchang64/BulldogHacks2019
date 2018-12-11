@@ -43,13 +43,8 @@ main img {
 }
 
 /* General components */
-#nav li ul {
-    position: absolute;
-    top: 52px;
-    left: -27px;
-    padding: 20px;
-}
 
+/* Dropdown Components */
 .my-tabs:hover {
     border-radius: 5px;
     background-color: var(--main-bg-color);
@@ -63,6 +58,7 @@ main img {
 
 .dropdown:hover .dropdown-menu {
     display: block;
+    transform: translateY(-2px);
 }
 
 .btn-blue {
